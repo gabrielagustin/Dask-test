@@ -1,6 +1,6 @@
 '''
-Filename: /home/ggarcia/Documents/Satellogic/Tests/GitHubTest/Dask-test/dask_create.py
-Path: /home/ggarcia/Documents/Satellogic/Tests/GitHubTest/Dask-test
+Filename: .../dask_create.py
+Path: .../Dask-test
 Created Date: Sunday, January 26th 2020, 6:50:37 pm
 Author: Gabriel Garcia
 
