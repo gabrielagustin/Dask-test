@@ -103,7 +103,7 @@ _SWIR2 = (_SWIR2-np.min(_SWIR2))/(np.max(_SWIR2)-np.min(_SWIR2))
 
 df = pd.DataFrame({'NDVI':_NDVI,
         'SWIR1':_SWIR1, 
-        'SWIR2':_SWIR2
+        'SWIR2':_SWIR2,
         'LST': _LST,
         'DEWPOINT': _DEWPOINT},
         columns=['NDVI', 'SWIR1', 'SWIR2', 'LST', 'DEWPOINT'])   
@@ -111,13 +111,13 @@ df = pd.DataFrame({'NDVI':_NDVI,
 df = df.replace(np.nan, -1)
 
 #### test dataframe pandas create .csv file
-# start_time = time()
+start_time = time()
 
-# df.to_csv(pathOut + "tabla1.csv", decimal = ",")
-# print("Archivo Validacion creado con exito!")
+df.to_csv(pathOut + "tabla_Pandas_test.csv", decimal = ",")
+print("Archivo Validacion creado con exito!")
 
-# elapsed_time = time() - start_time
-# print("Elapsed time for pandas: %.10f seconds." % elapsed_time)
+elapsed_time = time() - start_time
+print("Elapsed time for pandas: %.10f seconds." % elapsed_time)
 
 
 #### test dataframe Dask create .csv file
@@ -128,7 +128,7 @@ print(daskDataFrame.head())
 
 start_time = time()
 
-daskDataFrame.to_csv(pathOut + "tabla2.csv", single_file = True)
+daskDataFrame.to_csv(pathOut + "tabla_Dask_test.csv", single_file = True)
 print("Archivo Validacion creado con exito!")
 
 elapsed_time = time() - start_time
