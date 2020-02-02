@@ -58,6 +58,7 @@ for i in range (5,6):
     
     ### unified resolution and sizes
     nRow, nCol = bandNDVI.shape
+    type = "Nearest"
     
     data_src = src_ds_LST
     data_match = src_ds_NDVI
